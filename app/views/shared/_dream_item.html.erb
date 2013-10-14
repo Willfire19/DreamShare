@@ -1,0 +1,7 @@
+<!--<ul id="<%= dream_item.id %>"> -->
+<ul>
+	<span class="content"><%= dream_item.content %></span>
+	<span class="timestamp">
+		Shared <%= time_ago_in_words(dream_item.created_at) %> ago.
+	</span>
+</ul>

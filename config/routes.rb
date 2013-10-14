@@ -7,6 +7,12 @@ DreamShare::Application.routes.draw do
 
   get "static_pages/contact"
 
+  root :to => 'static_pages#landing'
+
+  resources :dreams 
+  resources :emails
+  
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

@@ -3,7 +3,9 @@ class StaticPagesController < ApplicationController
   end
 
   def landing
-  	@dreams = Dreams.all  
+  	@dream = Dream.new
+  	#@dreams = Dream.all.paginate(page: params[:page])  
+  	@dream_items = Dream.paginate(page: params[:page])
   end
 
   def home

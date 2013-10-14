@@ -1,2 +1,12 @@
-<h1>StaticPages#landing</h1>
-<p>Find me in app/views/static_pages/landing.html.erb</p>
+<h1>DreamShare</h1>
+<h2>I Have A Dream...</h2>
+<p>Everyone has a dream. Today, everybody tends to focus on the negative aspects of life. The economy is falling, the government is broken, there are no jobs available for graduates, and the people that are lucky enough to have jobs feel like they are overqualified for them. What people don't realize is that nearly everyone is educated, and it is easy as ever to connect and communicate with others. We all have the power to do what we dream, and it's getting easier to find others that share the same dream. My dream is to be able to use the skills I continuosly pick up to help others and leave the world better than when I found it.</p>
+
+<h2>What's yours?</h2>
+
+<%= render "dreams/form" %>
+
+<div class="dreams">
+	<h2>Dreams Around the World</h2>
+	<%= render 'shared/feed' %>
+</div>
