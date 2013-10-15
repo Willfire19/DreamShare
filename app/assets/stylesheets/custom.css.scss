@@ -1,4 +1,5 @@
 @import "bootstrap";
+@import url(http://fonts.googleapis.com/css?family=Bilbo|Roboto:500|Open+Sans:400,700);
 
 /* http://css-tricks.com/perfect-full-page-background-image/ */
 
@@ -10,24 +11,41 @@ html {
 	background-size: cover;
 }
 
+container {
+	padding: 100px;
+	margin: 100px;
+}
+
 body {
 	padding-top: 20px;
 	font-size: 16px;
-	font-family: "Open Sans", serif;
+	/* font-family: "Open Sans", serif; */
+	font-family: "Roboto", sans-serif;
 	background: transparent;
 }
 
 h1 {
-	font-family: "Abel", Arial, sans-serif;
+	/* font-family: "Abel", Arial, sans-serif; */
+	font-family: "Bilbo", cursive;
 	font-weight: 400;
-	font-size: 40px;
+	font-size: 80px;
+	text-align: center;
+	margin: 40px 0;
+	padding: 40px;
+}
+
+h2 {
+	font-family: "Open Sans", sans-serif;
+	font-weight: 700;
+	font-size: 30px;
 }
 
 /* Override B3 .panel adding a subtly transparent background */
 
 .panel {
-	background-color: rgba(255, 255, 255, 0.9);
+	background-color: rgba(255, 255, 255, 0.0);
 }
+
 
 .margin-base-vertical {
 	margin: 40px 0;
