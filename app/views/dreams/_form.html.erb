@@ -12,11 +12,12 @@
     <% end %>
   
     <div class="field">
-      <%= f.label :content, 'Dream' %><br/>
-      <%= f.text_area :content, size: "30x1" %>
+      <!--<%= f.label :content, 'Dream' %><br/> -->
+      <span class="input-group-addon"><span class="icon-globe"></span>
+      <%= f.text_area :content, :class => "form-control input-lg", :placeholder => "I Have A Dream...", size: "30x1" %>
     </div>
 
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit "Share Dream", :class => "btn btn-success bt-lg"%>
   </div>
 <% end %>
