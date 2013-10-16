@@ -44,7 +44,7 @@ class DreamsController < ApplicationController
 
     respond_to do |format|
       if @dream.save
-        format.html { redirect_to @dream, notice: 'Dream was successfully created.' }
+        format.html { redirect_to root_path, notice: 'Dream was successfully created.' }
         format.json { render json: @dream, status: :created, location: @dream }
       else
         format.html { render action: "new" }

@@ -1,5 +1,6 @@
 @import "bootstrap";
 @import url(http://fonts.googleapis.com/css?family=Bilbo|Roboto:500|Open+Sans:400,700);
+@import url(http://fonts.googleapis.com/css?family=Abel|Open+Sans:400,600);
 
 /* http://css-tricks.com/perfect-full-page-background-image/ */
 
@@ -11,9 +12,25 @@ html {
 	background-size: cover;
 }
 
-container {
-	padding: 100px;
-	margin: 100px;
+div.container {
+	padding: 10px;
+}
+
+div.dream-container {
+	margin-bottom: 10px;
+}
+
+p.dream {
+	margin: 0px;
+}
+
+div.dream-item {
+	border-style: solid;
+	border-width: 2px;
+	margin: 20px;
+	padding: 20px;
+	border-radius: 15px;
+
 }
 
 body {
@@ -40,10 +57,27 @@ h2 {
 	font-size: 30px;
 }
 
+p.content {
+	font-family: "Abel", Arial, sans-serif;
+	font-weight: 400;
+	font-size: 40px;
+	line-height: 1.0em;
+	margin: 0px;
+	padding: 0px;
+	text-align: justify;
+}
+
+p.timestamp {
+	text-align: right;
+	margin-top: 10px;
+	margin-bottom: -2.5px;
+	padding: 0px;
+}
+
 /* Override B3 .panel adding a subtly transparent background */
 
 .panel {
-	background-color: rgba(255, 255, 255, 0.75);
+	background-color: rgba(255, 255, 255, 0.3);
 }
 
 
