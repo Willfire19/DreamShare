@@ -20,6 +20,8 @@
 <body>
 
 <%= yield %>
-
+<% if Rails.env == "production" %>
+  <%= render "layouts/google-analytics" %>
+<% end %>
 </body>
 </html>
