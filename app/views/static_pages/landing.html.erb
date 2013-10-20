@@ -1,5 +1,12 @@
+<!--  The Tutorial Starts Here   -->
+
+<!-- As of right now, this website only consists of one webpage, which is the DreamTeam landing page, which is also the main page at this moment. Head over to the routes.rb for more info -->
+
+<!-- Below, you will see a couple of divs with some classes. While you do not see any css code for the container class and the row class, it's obvious it has some styling, and that would be due to the bootstrap plugin developed by twitter. Its best to look up the bootstrap documentation there. -->
 <div class="container">
 	<div class="row">
+
+		<!-- However, there is css code for the panel class. You can find the css code for the panel class and the margin-base-vertical class in app/assets/stylesheets/custom.css.scss -->
 		<div class="col-md-6 col-md offset-3 panel panel-default">
 			<h1 class="margin-base-vertical">DreamTeam</h1>
 			<h2>I Have A Dream...</h2>
@@ -8,14 +15,18 @@
 			<h2>What's yours?</h2>
 
 			<div class="margin-base-vertical">
+				<!-- This is a partial, which means that the code in the file app/views/dreams/_form.html.erb will render here. It is important to place code into partials so that you can just call the partial instead of writing the form code everytime you need it. It helps condense code and keep it neat! -->
 				<%= render "dreams/form" %>
 			</div>
 
 			<div class="margin-base-vertical">
 				<h2>Dreams Around the World</h2>
+				<!-- This partial calls for code in the app/views/shared/_feed.html.erb -->
 				<%= render 'shared/feed' %>
 			</div>
 			
 		</div>
 	</div>
 </div>
+
+<!-- It's important to note that this whole file is being rendered in the app/views/application.html.erb file. -->

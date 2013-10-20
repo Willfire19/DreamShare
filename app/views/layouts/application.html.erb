@@ -1,12 +1,15 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>DreamShare</title>
+  <title>DreamTeam</title>
   <%= stylesheet_link_tag    "application", :media => "all" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
+  <!-- The viewport allows mobile devices and tablets to view to website at a reasonable scale -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- The link below contains the fonts this website uses -->
   <link href='http://fonts.googleapis.com/css?family=Abel|Open+Sans:400,600' rel='stylesheet'>
+  <!-- The code below chooses the background image and sets it to cover the fullscreen. More info in the app/helpers/application_helper.rb -->
   <style type="text/css">
   	html {
 			background: url(<%= random_back_img %>) no-repeat center center fixed;
@@ -19,9 +22,15 @@
 </head>
 <body>
 
+<!-- The yield renders the page the user is looking at. Since the only page the user can see on this website is the landing page, the yield only renders the landing page. If I were to create a button that links to another page under the same domain name, the yield would render that page. In very simple words, the application.html.erb is included in every page of the website. -->
 <%= yield %>
+
+<!-- It's important to note that anything starting with a < % in a embedded ruby file (.erb) means that the code in the arrow thingys is actually ruby code. In this case, the code checks to see if the Rails environment is in production. If the Rails environment is in production (as in if its live), then it will execute the following line. All < % must be closed with an %>. -->
+
 <% if Rails.env == "production" %>
+  <!-- This partial renders code from the app/views/layout/_google-analytics.html.erb . Find out more info about google anaylitics in that file -->
   <%= render "layouts/google-analytics" %>
 <% end %>
+<!-- The if conditional must also have an < % end % > -->
 </body>
 </html>
